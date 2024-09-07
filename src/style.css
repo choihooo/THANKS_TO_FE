@@ -2,30 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  position: relative;
-  height: 100%;
-}
+@layer base {
+  @font-face {
+    font-family: 'SKTSansTTFBold';
+    src: url('/src/assets/fonts/SKTSansTTFBold.woff2') format('woff2');
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #010713;
-  color: #F6F6FE;
-}
+  @font-face {
+    font-family: 'SKTSansTTFMedium';
+    src: url('/src/assets/fonts/SKTSansTTFMedium.woff2') format('woff2');
+  }
 
-@font-face {
-  font-family: 'SKTSansTTFBold';
-  src: local(''), url('/src/assets/fonts/SKTSansTTFBold.woff2') format('woff2');
-}
+  @font-face {
+    font-family: 'SKTSansTTFRegular';
+    src: url('/src/assets/fonts/SKTSansTTFRegular.woff2') format('woff2');
+  }
 
-@font-face {
-  font-family: 'SKTSansTTFBMedium';
-  src: local(''), url('/src/assets/fonts/SKTSansTTFMedium.woff2') format('woff2');
-}
+  html,
+  body {
+    @apply relative h-full;
+    min-width: 1200px;
+  }
 
-@font-face {
-  font-family: 'SKTSansTTFRegular';
-  src: local(''), url('/src/assets/fonts/SKTSansTTFRegular.woff2') format('woff2');
+  body {
+    @apply m-0 p-0 bg-[#010713] text-[#F6F6FE];
+  }
 }

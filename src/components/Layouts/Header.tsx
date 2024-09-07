@@ -1,11 +1,11 @@
+import Logo from '../../assets/SVG/DEVOCEAN_LOGO.svg';
+
 export const Header = () => {
 	return (
 		<>
 			<header className="flex justify-between h-[74px] py-6 px-[90px]">
-				<div className="flex justify-center items-center text-[25px]">
-					<div className="w-6 h-6 bg-white"></div>
-					<div>DEVOCEAN</div>
-				</div>
+				<img src={Logo} alt="Devocean" className="w-36 h-6" />
+
 				<div className="flex text-lg font-medium gap-12">
 					<div>About</div>
 					<div>Project</div>

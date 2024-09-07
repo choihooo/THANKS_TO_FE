@@ -14,3 +14,18 @@ body {
   background: #010713;
   color: #F6F6FE;
 }
+
+@font-face {
+  font-family: 'SKTSansTTFBold';
+  src: local(''), url('/src/assets/fonts/SKTSansTTFBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SKTSansTTFBMedium';
+  src: local(''), url('/src/assets/fonts/SKTSansTTFMedium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SKTSansTTFRegular';
+  src: local(''), url('/src/assets/fonts/SKTSansTTFRegular.woff2') format('woff2');
+}

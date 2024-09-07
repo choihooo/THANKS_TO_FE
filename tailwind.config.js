@@ -2,7 +2,13 @@
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sktBold: ['SKTSansTTFBold'],
+				sktMedium: ['SKTSansTTFMedium'],
+				sktRegular: ['SKTSansTTFRegular'],
+			},
+		},
 	},
 	plugins: [],
 };

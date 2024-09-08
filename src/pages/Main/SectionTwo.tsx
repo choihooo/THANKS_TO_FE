@@ -1,7 +1,9 @@
 const SectionTwo = () => {
 	return (
 		<div className="w-full h-[calc(100%-74px)] flex justify-center items-center flex-col">
-			<div className="text-[24px] mb-[21px]">The Spirit of DEVOCEAN</div>
+			<div className="text-[24px] mb-[21px] mt-[50px]">
+				The Spirit of DEVOCEAN
+			</div>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="473"

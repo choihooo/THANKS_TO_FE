@@ -25,26 +25,28 @@ const Page: React.FC = () => {
 	};
 
 	return (
-		<SectionsContainer {...options}>
-			<Section>
-				<SectionOne />
-			</Section>
-			<Section>
-				<SectionTwo />
-			</Section>
-			<Section className="section">
-				<SectionThree />
-			</Section>
-			<Section>
-				<SectionFour />
-			</Section>
-			<Section>
-				<SectionFive />
-			</Section>
-			<Section>
-				<SectionSix />
-			</Section>
-		</SectionsContainer>
+		<div className="mt-[50px]">
+			<SectionsContainer {...options}>
+				<Section>
+					<SectionOne />
+				</Section>
+				<Section>
+					<SectionTwo />
+				</Section>
+				<Section className="section">
+					<SectionThree />
+				</Section>
+				<Section>
+					<SectionFour />
+				</Section>
+				<Section>
+					<SectionFive />
+				</Section>
+				<Section>
+					<SectionSix />
+				</Section>
+			</SectionsContainer>
+		</div>
 	);
 };
 

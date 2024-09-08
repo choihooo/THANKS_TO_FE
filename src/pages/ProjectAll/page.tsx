@@ -13,6 +13,10 @@ export const ProjectAllPage = () => {
 		generation: 0,
 	});
 
+	const activeCount = useCountNum(info.active);
+	const projectCount = useCountNum(info.project);
+	const generationCount = useCountNum(info.generation);
+
 	const { data } = useQuery({
 		queryKey: ['project-all-data'],
 		queryFn: () => getProject(params),
@@ -49,19 +53,19 @@ export const ProjectAllPage = () => {
 					<div className="min-w-[975px] flex justify-center">
 						<div className="w-1/3 text-center border-r-[1px] border-[#293652] space-y-2">
 							<div className="text-[#5B85FF] text-[36px] font-bold">
-								{useCountNum(info.active)}
+								{activeCount}
 							</div>
 							<div className="font-sktRegular">누적 활동 인원</div>
 						</div>
 						<div className="w-1/3 text-center border-r-[1px] border-[#293652] space-y-2">
 							<div className="text-[#5B85FF] text-[36px] font-bold">
-								{useCountNum(info.project)}
+								{projectCount}
 							</div>
 							<div className="font-sktRegular">프로젝트</div>
 						</div>
 						<div className="w-1/3 text-center space-y-1 ">
 							<div className="text-[#5B85FF] text-[36px] font-bold">
-								{useCountNum(info.generation)}
+								{generationCount}
 							</div>
 							<div className="font-sktRegular">운영 기수</div>
 						</div>

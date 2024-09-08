@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 function easeOutExpo(t: number): number {
 	return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
@@ -6,20 +6,29 @@ function easeOutExpo(t: number): number {
 
 export default function useCountNum(end: number, start = 0, duration = 2000) {
 	const [count, setCount] = useState(start);
+	const countRef = useRef(start);
 	const frameRate = 1000 / 60;
 	const totalFrame = Math.round(duration / frameRate);
 
 	useEffect(() => {
-		let currentNumber = start;
+		let frame = 0;
 		const counter = setInterval(() => {
-			const progress = easeOutExpo(++currentNumber / totalFrame);
-			setCount(Math.round(end * progress));
+			frame++;
+			const progress = easeOutExpo(frame / totalFrame);
+			const currentCount = Math.round(start + (end - start) * progress);
 
-			if (progress === 1) {
+			if (currentCount !== countRef.current) {
+				countRef.current = currentCount;
+				setCount(currentCount);
+			}
+
+			if (frame === totalFrame) {
 				clearInterval(counter);
 			}
 		}, frameRate);
-	}, [end, frameRate, start, totalFrame]);
+
+		return () => clearInterval(counter);
+	}, [end, start, totalFrame, frameRate]);
 
 	return count;
 }

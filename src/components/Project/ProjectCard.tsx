@@ -1,10 +1,27 @@
-export const ProjectCard = () => {
+import { Project } from '@/apis/getProject';
+import { useNavigate } from 'react-router-dom';
+
+interface ProjectCardProps {
+	project: Project;
+}
+
+export const ProjectCard = ({ project }: ProjectCardProps) => {
+	const navigate = useNavigate();
+	const gotoProjectDetail = (id: number) => {
+		navigate(`/project/${id}`);
+	};
 	return (
-		<div className="cursor-pointer relative w-[328px] h-[310px] border-[1px] border-[#293652] bg-[#D8D9DD] rounded-lg hover:scale-105 transition-transform duration-300 ease-in-out">
-			<div className="absolute px-[29px] py-6 bottom-[-1px] border-[1px] border-[#293652] bg-[#071329] w-full h-[105px] rounded-b-lg ">
-				<div className="flex justify-center items-center font-sktRegular text-sm min-w-[270px]">
-					OpenLab - OpenLLM, Advanced RAG를 이용한 chatbot 구현
-				</div>
+		<div
+			className="cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out"
+			onClick={() => gotoProjectDetail(project.project_id)}
+		>
+			<img
+				src={project.thumbnail}
+				alt="devocean_project"
+				className="w-[328px] h-[206px] rounded-t-[8px] border-[1px] border-[#293652]"
+			/>
+			<div className="h-[105px] rounded-b-[8px] bg-[#071329] border-[1px] border-[#293652]">
+				<div className="font-sktRegular p-[25px]">{project.title}</div>
 			</div>
 		</div>
 	);

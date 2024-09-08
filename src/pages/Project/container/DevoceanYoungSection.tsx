@@ -1,13 +1,31 @@
+import { getProject } from '@/apis/getProject';
+import { DropDown } from '@/components/Project/DropDown';
 import { ProjectCard } from '@/components/Project/ProjectCard';
 import { CaretRight } from '@phosphor-icons/react';
+import { useQuery } from '@tanstack/react-query';
+import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 
-export const DevoceanYoungSection = () => {
+type DevoceanYoungSectionProps = {
+	type: string;
+};
+
+export const DevoceanYoungSection = forwardRef<
+	HTMLDivElement,
+	DevoceanYoungSectionProps
+>(({ type }, ref) => {
+	console.log(type);
+	const { data } = useQuery({
+		queryKey: ['project-devocean-data'],
+		queryFn: () => getProject('DEVOCEAN_YOUNG'),
+	});
+
 	return (
-		<section className="mb-[194px] animate-fadeout">
+		<div ref={ref} className="mb-[194px] animate-fadeout max-w-[1020px]">
 			<div className="mb-10">
-				<div className="flex mb-[29px]">
-					<div className="font-sktBold text-lg mb-6">데보션 영</div>
+				<div className="flex items-center space-x-5 mb-[29px]">
+					<div className="font-sktBold text-lg">데보션 영</div>
+					<DropDown />
 				</div>
 				<div className="flex justify-between items-center">
 					<div className="font-sktRegular text-[16px]">
@@ -27,16 +45,15 @@ export const DevoceanYoungSection = () => {
 				</div>
 			</div>
 			<div className="grid grid-cols-3 gap-[18px]">
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
+				{data
+					?.slice(0, 6)
+					.map((devocean) => (
+						<ProjectCard key={devocean.project_id} project={devocean} />
+					))}
 			</div>
 			<div className="cursor-pointer flex items-center justify-end gap-[3px] pt-3">
 				<Link
-					to={'/project/all?devocean-young'}
+					to={'/project/all?DEVOCEAN_YOUNG'}
 					className="font-sktRegular text-sm text-[#9F9FA8]"
 				>
 					전체보기
@@ -45,6 +62,6 @@ export const DevoceanYoungSection = () => {
 					<CaretRight size={14} color="#9F9FA8" />
 				</span>
 			</div>
-		</section>
+		</div>
 	);
-};
+});

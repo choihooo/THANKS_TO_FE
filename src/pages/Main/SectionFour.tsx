@@ -1,7 +1,7 @@
 const SectionFour = () => {
 	return (
 		<div className="w-[100%] h-[calc(100%-74px)] flex flex-col justify-center items-center">
-			<div className="text-[36px]">Educational Programs</div>
+			<div className="text-[36px] mt-[80px]">Educational Programs</div>
 			<div className="text-[18px] mt-[12px]">
 				데보션의 교육 프로그램을 소개합니다.
 			</div>

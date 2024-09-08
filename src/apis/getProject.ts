@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = import.meta.env.VITE_API_URL;
+const url = import.meta.env.VITE_PROXY_URL;
 
 export interface Project {
 	title: string;

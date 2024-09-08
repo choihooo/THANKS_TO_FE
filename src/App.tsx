@@ -1,8 +1,8 @@
 import { BrowserRouter } from 'react-router-dom';
 import './style.css';
 import { Router } from './router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ScrollToTop } from './components/ScrollTop/ScrollTop';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function App() {
 	const queryClient = new QueryClient();

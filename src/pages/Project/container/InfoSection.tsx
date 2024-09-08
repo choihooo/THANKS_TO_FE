@@ -1,11 +1,25 @@
 import { CaretRight } from '@phosphor-icons/react';
+import { useNavigate } from 'react-router-dom';
 
 export const InfoSection = () => {
+	const navigate = useNavigate();
+
+	const gotoDevocean = () => {
+		navigate('/project/all?devocean-young');
+	};
+
+	const gotoOpenlab = () => {
+		navigate('/project/all?openlab');
+	};
+
 	return (
-		<section className="mb-[69px]">
+		<section className="mb-[69px] animate-fadeout">
 			<div className="font-sktBold text-lg mb-6">Devocean 프로젝트</div>
 			<div className="flex space-x-4">
-				<div className="cursor-pointer flex-col justify-end w-[220px] border border-[#6F6F83] rounded-2xl px-5 pt-8 pb-[70px] space-y-[10px]">
+				<div
+					onClick={gotoDevocean}
+					className="cursor-pointer flex-col justify-end w-[220px] border border-[#6F6F83] rounded-2xl px-5 pt-8 pb-[70px] space-y-[10px]"
+				>
 					<div className="flex items-center justify-between font-sktBold text-lg">
 						데보션 영{' '}
 						<span className="pb-1">
@@ -17,7 +31,10 @@ export const InfoSection = () => {
 						<p>프로젝트 보러가기</p>
 					</div>
 				</div>
-				<div className="cursor-pointer flex-col justify-end w-[220px] border border-[#6F6F83] rounded-2xl px-5 py-8 space-y-[10px]">
+				<div
+					onClick={gotoOpenlab}
+					className="cursor-pointer flex-col justify-end w-[220px] border border-[#6F6F83] rounded-2xl px-5 py-8 space-y-[10px]"
+				>
 					<div className="flex items-center justify-between font-sktBold text-[24px]">
 						OpenLab{' '}
 						<span className="pb-1">

@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 
 export const DevoceanYoungSection = () => {
 	return (
-		<section className="mb-[194px]">
+		<section className="mb-[194px] animate-fadeout">
 			<div className="mb-10">
 				<div className="flex mb-[29px]">
 					<div className="font-sktBold text-lg mb-6">데보션 영</div>
 				</div>
 				<div className="flex justify-between items-center">
-					<div className="font-sktRegular text-sm">
+					<div className="font-sktRegular text-[16px]">
 						데보션 영(Devocean Young)은 SK텔레콤의 개발자 커뮤니티인
 						데보션(Devocean)에서 운영하는 프로그램으로, <br />
 						주로 젊은 개발자들이 참여하여 기술적 역량을 키우고 다양한 프로젝트에
@@ -35,7 +35,10 @@ export const DevoceanYoungSection = () => {
 				<ProjectCard />
 			</div>
 			<div className="cursor-pointer flex items-center justify-end gap-[3px] pt-3">
-				<Link to={'/'} className="font-sktRegular text-sm text-[#9F9FA8]">
+				<Link
+					to={'/project/all?devocean-young'}
+					className="font-sktRegular text-sm text-[#9F9FA8]"
+				>
 					전체보기
 				</Link>
 				<span>

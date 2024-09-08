@@ -35,7 +35,10 @@ export const OpenLabSection = () => {
 				<ProjectCard />
 			</div>
 			<div className="cursor-pointer flex items-center justify-end gap-[3px] pt-3 mb-[181px]">
-				<Link to={'/'} className="font-sktRegular text-sm text-[#9F9FA8]">
+				<Link
+					to={'/project/all?openlab'}
+					className="font-sktRegular text-sm text-[#9F9FA8]"
+				>
 					전체보기
 				</Link>
 				<span>

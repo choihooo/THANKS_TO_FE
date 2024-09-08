@@ -14,9 +14,20 @@ export default {
 						transform: 'translate3d(0, 0, 0)',
 					},
 				},
+				fadeInDown: {
+					'0%': {
+						opacity: '0',
+						transform: 'translate3d(0, -100%, 0)',
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateZ(0)',
+					},
+				},
 			},
 			animation: {
 				fadeout: 'fadeout 1s',
+				fadeInDown: 'fadeInDown 1s ease-out forwards',
 			},
 		},
 		fontFamily: {

@@ -8,10 +8,12 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
     },
 
     /* Bundler mode */
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": false,
@@ -24,7 +26,8 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
   },
   "include": ["src", "svg.d.ts"],
 }

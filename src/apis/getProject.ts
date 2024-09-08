@@ -12,7 +12,7 @@ export interface getProjectResponse {
 
 export const getProject = async (type: string) => {
 	try {
-		const response = await axios.get<getProjectResponse>(`api/projects`, {
+		const response = await axios.get<getProjectResponse>(`/api/projects`, {
 			params: {
 				type: type,
 			},
@@ -31,7 +31,7 @@ export interface getProjectDetailResponse {
 export const getProjectDetail = async (id: number) => {
 	try {
 		const response = await axios.get<getProjectDetailResponse>(
-			`api/projects/${id}`,
+			`/api/projects/${id}`,
 		);
 		return response.data;
 	} catch (err) {

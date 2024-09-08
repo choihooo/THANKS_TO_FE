@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+const url = import.meta.env.VITE_API_URL;
+
 export interface Project {
 	title: string;
 	thumbnail: string;
@@ -12,14 +14,11 @@ export interface getProjectResponse {
 
 export const getProject = async (type: string) => {
 	try {
-		const response = await axios.get<getProjectResponse>(
-			'http://43.201.48.73:8080/projects',
-			{
-				params: {
-					type: type,
-				},
+		const response = await axios.get<getProjectResponse>(`${url}/projects`, {
+			params: {
+				type: type,
 			},
-		);
+		});
 		return response.data.projects;
 	} catch (err) {
 		console.error(err);
@@ -34,7 +33,7 @@ export interface getProjectDetailResponse {
 export const getProjectDetail = async (id: number) => {
 	try {
 		const response = await axios.get<getProjectDetailResponse>(
-			`http://43.201.48.73:8080/projects/${id}`,
+			`${url}/projects/${id}`,
 		);
 		return response.data;
 	} catch (err) {

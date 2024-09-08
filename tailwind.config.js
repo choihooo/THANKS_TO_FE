@@ -4,6 +4,16 @@ export default {
 	theme: {
 		extend: {
 			keyframes: {
+				fadeout: {
+					'0%': {
+						opacity: 0,
+						transform: 'translate3d(0, 10px, 0)',
+					},
+					'100%': {
+						opacity: 1,
+						transform: 'translate3d(0, 0, 0)',
+					},
+				},
 				fadeInDown: {
 					'0%': {
 						opacity: '0',
@@ -16,8 +26,30 @@ export default {
 				},
 			},
 			animation: {
+				fadeout: 'fadeout 1s',
 				fadeInDown: 'fadeInDown 1s ease-out forwards',
 			},
+		},
+		fontFamily: {
+			sktBold: ['SKTSansTTFBold'],
+			sktMedium: ['SKTSansTTFMedium'],
+			sktRegular: ['SKTSansTTFRegular'],
+		},
+		fontSize: {
+			lg: [
+				'24px',
+				{
+					lineHeight: '36px',
+					fontWeight: '700',
+				},
+			],
+			sm: [
+				'14px',
+				{
+					lineHeight: '21px',
+					fontWeight: '400',
+				},
+			],
 		},
 	},
 	plugins: [],

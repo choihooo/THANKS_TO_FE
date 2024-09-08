@@ -12,6 +12,8 @@
     },
 
     /* Bundler mode */
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": false,
@@ -27,5 +29,5 @@
     "noFallthroughCasesInSwitch": true,
 
   },
-  "include": ["src"]
+  "include": ["src", "svg.d.ts"],
 }

@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'SKTSansTTFBold';
+    src: url('/src/assets/fonts/SKTSansTTFBold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'SKTSansTTFMedium';
+    src: url('/src/assets/fonts/SKTSansTTFMedium.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'SKTSansTTFRegular';
+    src: url('/src/assets/fonts/SKTSansTTFRegular.woff2') format('woff2');
+  }
+
+  html,
+  body {
+    @apply relative h-full;
+    min-width: 1200px;
+  }
+
+  body {
+    @apply m-0 p-0 bg-[#010713] text-[#F6F6FE];
+  }
+}
+
 html,
 body {
   position: relative;
@@ -18,4 +45,8 @@ body {
 
 .bg-custom-gradient {
   background: linear-gradient(180deg, #010713 0%, #071329 100%);
+}
+
+.toastui-editor-contents p {
+  color: white;
 }

@@ -1,4 +1,5 @@
 import { getProject } from '@/apis/getProject';
+import { DropDown } from '@/components/Project/DropDown';
 import { ProjectCard } from '@/components/Project/ProjectCard';
 import { CaretRight } from '@phosphor-icons/react';
 import { useQuery } from '@tanstack/react-query';
@@ -20,8 +21,9 @@ export const OpenLabSection = forwardRef<HTMLDivElement, OpenLabSectionProps>(
 		return (
 			<div ref={ref} className="max-w-[1020px]">
 				<div className="mb-10">
-					<div className="flex mb-[29px]">
-						<div className="font-sktBold text-lg mb-6">OpenLab</div>
+					<div className="flex items-center space-x-5 mb-[29px]">
+						<div className="font-sktBold text-lg">Open Lab</div>
+						<DropDown />
 					</div>
 					<div className="flex justify-between items-center">
 						<div className="font-sktRegular text-sm">

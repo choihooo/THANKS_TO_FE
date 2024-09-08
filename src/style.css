@@ -6,6 +6,7 @@ html,
 body {
   position: relative;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -13,4 +14,8 @@ body {
   padding: 0;
   background: #010713;
   color: #F6F6FE;
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(180deg, #010713 0%, #071329 100%);
 }

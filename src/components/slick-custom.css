@@ -1,0 +1,36 @@
+.custom-slick-list .slick-list {
+    height: 274px; /* 원하는 높이로 설정 */
+    max-width: 1450px;
+    overflow: hidden; /* 필요시 넘치는 슬라이드 숨기기 */
+}
+
+.custom-slick-list .slick-track {
+    height: 100%; /* 트랙의 높이도 100%로 설정 */
+    display: flex; /* 슬라이드를 가로로 정렬 */
+    overflow: hidden;
+}
+
+.custom-slick-list .slick-slide {
+    margin: 0 12px; /* 슬라이드 좌우 간격을 10px로 설정 */
+  }
+  
+.custom-gradient-overlay::before,
+.custom-gradient-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  height: 274px;
+  z-index: 1;
+}
+
+.custom-gradient-overlay::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(7, 19, 41, 0.8) 0%, rgba(5, 16, 35, 0.58) 40%, rgba(1, 7, 19, 0.0) 100%);
+}
+
+.custom-gradient-overlay::after {
+  right: 0;
+  background: linear-gradient(-90deg, rgba(7, 19, 41, 0.8) 0%, rgba(5, 16, 35, 0.58) 40%, rgba(1, 7, 19, 0.0) 100%);
+}

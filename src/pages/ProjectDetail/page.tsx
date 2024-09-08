@@ -2,6 +2,7 @@ import { getProjectDetail } from '@/apis/getProject';
 import { List } from '@phosphor-icons/react';
 import { useQuery } from '@tanstack/react-query';
 import { Viewer } from '@toast-ui/react-editor';
+import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight';
 import { useNavigate, useParams } from 'react-router-dom';
 
 type ParamsType = {
@@ -14,6 +15,7 @@ export const ProjectDetailPage = () => {
 		queryKey: ['project-detail'],
 		queryFn: () => getProjectDetail(Number(id)),
 	});
+	console.log(data?.content);
 
 	const navigate = useNavigate();
 	const gotoBack = () => {
@@ -30,7 +32,10 @@ export const ProjectDetailPage = () => {
 							<div className="font-sktRegular text-lg">{data?.title}</div>
 						</div>
 						<div className="mt-[200px] mb-[126px] mx-[136px]">
-							<Viewer initialValue={data?.content} />
+							<Viewer
+								initialValue={data?.content}
+								plugins={[codeSyntaxHighlight]}
+							/>
 						</div>
 						<div
 							onClick={gotoBack}

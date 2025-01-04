@@ -7,10 +7,6 @@ export const Header = () => {
 			<Link to={'/'}>
 				<img src={Logo} alt="Devocean" className="w-[148px] h-[25px]" />
 			</Link>
-			<nav className="flex font-sktMedium text-sm gap-12">
-				<Link to={'/'}>About</Link>
-				<Link to={'/project'}>Project</Link>
-			</nav>
 		</header>
 	);
 };

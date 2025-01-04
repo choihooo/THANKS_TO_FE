@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import ReviewBox from './ReviewBox';
-import * as reviewsData from './reviews.json'; // JSON 파일 가져오기
-import './slick-custom.css'; // 커스텀 CSS 파일 임포트
+import * as reviewsData from '../../assets/data/reviews.json';
+import '../styles/slick-custom.css'; // 커스텀 CSS 파일 임포트
 
 // 리뷰 데이터에 대한 타입 정의
 interface Review {

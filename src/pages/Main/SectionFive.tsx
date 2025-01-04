@@ -1,4 +1,4 @@
-import ReviewSwiper from '@/components/ReviewSwiper';
+import ReviewSwiper from '@/components/Reviews/ReviewSwiper';
 
 const SectionFive = () => {
 	return (

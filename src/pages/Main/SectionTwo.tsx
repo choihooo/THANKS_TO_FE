@@ -40,7 +40,7 @@ const SectionTwo = () => {
 			</div>
 			<div className="grid grid-cols-3 w-full bg-custom-gradient h-[530px]">
 				<div className="flex flex-col items-center justify-center">
-					<img src="img_value01.png" alt="" />
+					<img src="/images/values/img_value01.png" alt="" />
 					<div className="mt-[26px] text-[18px]">문화</div>
 					<div className="text-center mt-[20px]">
 						노하우는 나누고, 인사이트 더해,
@@ -49,7 +49,7 @@ const SectionTwo = () => {
 					</div>
 				</div>
 				<div className="flex flex-col items-center justify-center">
-					<img src="img_value02.png" alt="" />
+					<img src="/images/values/img_value02.png" alt="" />
 					<div className="mt-[26px] text-[18px]">기술</div>
 					<div className="text-center mt-[20px]">
 						끝없이 펼쳐지는 지식과 경험,
@@ -60,7 +60,7 @@ const SectionTwo = () => {
 					</div>
 				</div>
 				<div className="flex flex-col items-center justify-center">
-					<img src="img_value03.png" alt="" />
+					<img src="/images/values/img_value03.png" alt="" />
 					<div className="mt-[26px] text-[18px]">사람</div>
 					<div className="text-center mt-[20px]">
 						더 나은 세상을 위해

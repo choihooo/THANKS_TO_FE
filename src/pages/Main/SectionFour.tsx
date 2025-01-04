@@ -6,7 +6,7 @@ const SectionFour = () => {
 				데보션의 교육 프로그램을 소개합니다.
 			</div>
 			<div className="flex gap-[16px] mt-[44px]">
-				<div className="w-[592px] h-[592px] bg-[url('/youngBg.png')] bg-cover bg-center flex flex-col justify-center items-center">
+				<div className="w-[592px] h-[592px] bg-[url('/images/bg/youngBg.png')] bg-cover bg-center flex flex-col justify-center items-center">
 					<div className="text-[52px]">데보션 영</div>
 					<div className="text-center text-[18px] mt-[12px]">
 						SK텔레콤은 개발자 생태계 내 소통과 공유 문화를 <br />
@@ -16,7 +16,7 @@ const SectionFour = () => {
 						프로젝트 결과물 보러가기 &gt;
 					</div>
 				</div>
-				<div className="w-[592px] h-[592px] bg-[url('/AiBg.png')] bg-cover bg-center flex flex-col justify-center items-center">
+				<div className="w-[592px] h-[592px] bg-[url('/images/bg//AiBg.png')] bg-cover bg-center flex flex-col justify-center items-center">
 					<div className="text-[52px]">Open Lab</div>
 					<div className="text-center text-[18px] mt-[12px]">
 						전문가가 주도하는 AI 스터디 <br />
